@@ -19,8 +19,11 @@ return new class extends Migration
             $table->string('mark');
             $table->string('photo')->nullable();
             $table->string('characteristics');
-            $table->json('comments')->nullable();
+            $table->enum('type', ['CAR', 'MOTORCYCLE']);
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
     

@@ -13,4 +13,12 @@ class Vehicle extends Model
         'year',
         'characteristics',
       ];
+      
+    const TYPE_CAR = 'CAR';
+    const TYPE_MOTORCYCLE = 'MOTORCYCLE';
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
