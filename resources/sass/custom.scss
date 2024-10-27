@@ -1,3 +1,26 @@
 .text-yellow {
-    color: $yellow-color;
+    color: #ffcc00;
+    &:hover { 
+        color: #fff; 
+    }
+}
+
+.text-yellow-color {
+    color: #ffcc00;
+}
+
+.bg-default {
+    background-color: #262626;
+}
+
+.bg-card {
+    background-color: #0d0d0d;
+}
+
+.btn-yellow {
+    background-color: #ffcc00;
+    &:hover { 
+        color: #ffcc00; 
+        background-color: #fff; 
+    }
 }

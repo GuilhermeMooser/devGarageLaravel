@@ -1,5 +1,8 @@
 .text-yellow {
-  color: #ffcc00;
+  color: var(#ffcc00);
+}
+.text-yellow:hover {
+  color: #fff;
 }
 
 /*# sourceMappingURL=custom.css.map */

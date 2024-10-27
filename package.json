@@ -4,7 +4,8 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "build-css": "sass resources/sass/custom.scss public/css/custom.css"
+        "build-css": "sass resources/sass/custom.scss public/css/custom.css",
+        "watch-css": "sass --watch resources/sass/custom.scss:public/css/custom.css"
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
