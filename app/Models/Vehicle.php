@@ -8,12 +8,16 @@ class Vehicle extends Model
 {
     protected $fillable = [
         'name',
-        'mark',
-        'model',
         'year',
+        'model',
+        'mark',
+        'photo',
         'characteristics',
-      ];
-      
+        'type',
+        'price',
+        'user_id',
+    ];
+
     const TYPE_CAR = 'CAR';
     const TYPE_MOTORCYCLE = 'MOTORCYCLE';
 

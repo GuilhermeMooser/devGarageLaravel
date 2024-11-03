@@ -7,6 +7,9 @@
 
 .text-yellow-color {
     color: #ffcc00;
+    &:hover { 
+        color: #ffcc00; 
+    }
 }
 
 .bg-default {
@@ -22,5 +25,28 @@
     &:hover { 
         color: #ffcc00; 
         background-color: #fff; 
+    }
+}
+
+.btn-purple {
+    background-color: #9900ff;
+    color: white;
+    &:hover { 
+        color: #9900ff; 
+        background-color: #fff; 
+    }
+}
+
+.custom-position {
+    position: relative;
+    top: -60px;
+}
+
+.border-item-home {
+    border: 2px solid white;
+    transition: 0.3s;
+    &:hover {
+        border-color: #d61e30;
+        transition: 0.3s;
     }
 }
