@@ -10,14 +10,8 @@
         <div class="col-md-10">
             <div class="bg-black rounded-4">
                 <div class="row text-white p-4">
-                    <div class="col-md-4 text-center fs-4">
+                    <div class="text-center fs-3">
                         EXCLUSIVE STOCK
-                    </div>
-                    <div class="col-md-8 d-flex justify-content-center align-items-center">
-                        <input type="text" class="form-control mx-2" placeholder="Search">
-                        <select name="" id="" class="form-select mx-2">
-                            <option value="">Select</option>
-                        </select>
                     </div>
                 </div>
                 <hr>
