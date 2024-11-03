@@ -23,21 +23,23 @@
                 <hr>
                 <div class="row justify-content-center">
                     @foreach($vehicles as $vehicle)
-                    <div class="col-md-3 rounded-4 m-3 border-item-home"> <!-- Ajuste a largura da coluna aqui -->
-                        <div class="text-center">
-                            <div class="rounded-top-4 bg-black text-light p-1 fs-4 fst-italic">
-                                {{ $vehicle->name }}
-                            </div>
-                            <img class="img-fluid rounded-2" src="{{ $vehicle->photo }}" alt="{{ $vehicle->name }}" style="width: 100%; height: 200px; object-fit: cover;">
-                            <div class="d-flex align-items-center p-1">
-                                <div class="col-md-7 text-start fs-5 text-secondary">
-                                    {{ $vehicle->mark }}
+                    <div class="col-md-3 rounded-4 m-3 border-item-home">
+                        <a href="{{ route('vehicle.show', $vehicle->id) }}" class="text-decoration-none text-dark">
+                            <div class="text-center">
+                                <div class="rounded-top-4 bg-black text-light p-1 fs-4 fst-italic">
+                                    {{ $vehicle->name }}
                                 </div>
-                                <div class="col-md-5 fs-6 bg-danger rounded-2 text-black text-nowrap">
-                                    R$ {{ $vehicle->price}}
+                                <img class="img-fluid rounded-2" src="{{ $vehicle->photo }}" alt="{{ $vehicle->name }}" style="width: 100%; height: 200px; object-fit: cover;">
+                                <div class="d-flex align-items-center p-1">
+                                    <div class="col-md-7 text-start fs-5 text-secondary">
+                                        {{ Str::limit($vehicle->mark, 10, '...') }}
+                                    </div>
+                                    <div class="col-md-5 fs-6 bg-danger rounded-2 text-black text-nowrap">
+                                        R$ {{ $vehicle->price}}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     @endforeach
                 </div>

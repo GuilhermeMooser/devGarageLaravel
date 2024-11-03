@@ -28,14 +28,13 @@ class VehicleController extends Controller
       'year' => 'required',
       'mark' => 'required',
       'photo' => 'nullable',
-      'characteristics' => 'required',
+      'characteristics' => 'required|max:500',
       'type' => 'required',
       'price' => 'required',
       'user_id' => 'required',
     ]);
-    Vehicle::create($request->all());
-    return redirect()->route('home')
-      ->with('success', 'Vehicle created successfully.');
+    $vehicle = Vehicle::create($request->all());
+    return redirect()->route('vehicle.show', $vehicle->id);
   }
 
   /**
@@ -44,6 +43,11 @@ class VehicleController extends Controller
   public function show(string $id)
   {
     $vehicle = Vehicle::find($id);
+
+    if (!$vehicle) {
+      return redirect()->route('vehicle.index')->with('error', 'Vehicle not found.');
+    }
+
     return view('vehicle.show', compact('vehicle'));
   }
 
@@ -58,15 +62,13 @@ class VehicleController extends Controller
       'year' => 'required',
       'mark' => 'required',
       'photo',
-      'characteristics' => 'required',
+      'characteristics' => 'required|max:500',
       'type' => 'required',
       'price' => 'required',
-      'user_name' => 'required',
     ]);
     $vehicle = Vehicle::find($id);
     $vehicle->update($request->all());
-    return redirect()->route('vehicle.index')
-      ->with('success', 'Vehicle updated successfully.');
+    return redirect()->route('vehicle.show', $vehicle->id);
   }
 
   /**

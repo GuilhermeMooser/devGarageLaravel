@@ -53,7 +53,7 @@
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-12 col-md-10 col-lg-8 text-light">
         <h3 class="h1 text-yellow-color">Vehicle</h3>
-        <form action="{{ route('vehicle.store') }}" method="post" class="border border-2 p-2 rounded">
+        <form action="{{ route('vehicle.store') }}" method="post" class="border-custom p-5 rounded bg-black">
           @csrf
           <div class="row mb-3">
             <div class="form-group col-12 col-md-6">
@@ -81,7 +81,7 @@
             </div>
             <div class="form-group col-12 col-md-6">
               <label for="characteristics" class="text-yellow-color">Characteristics</label>
-              <input class="form-control" id="characteristics" name="characteristics" rows="3" required></input>
+              <input class="form-control" id="characteristics" name="characteristics" rows="3" required max="500"></input>
             </div>
           </div>
 
@@ -95,7 +95,7 @@
             </div>
             <div class="form-group col-12 col-md-4">
               <label for="price" class="text-yellow-color">Price</label>
-              <input class="form-control" id="price" name="price" rows="3" required></input>
+              <input class="form-control" id="price" name="price" rows="3" required type="number"></input>
             </div>
             <div class="form-group col-12 col-md-4">
               <label for="user_name" class="text-yellow-color">Owner</label>
