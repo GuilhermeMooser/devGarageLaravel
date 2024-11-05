@@ -55,4 +55,14 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Role::class);
     }
+
+    protected static function booted()
+    {
+        static::creating(function ($user) {
+            if (!$user->role_id) {
+                $defaultRole = Role::where('name', 'User')->first();
+                $user->role()->associate($defaultRole);
+            }
+        });
+    }
 }
