@@ -16,10 +16,10 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
-<body class="bg-default">
+<body class="d-flex flex-column min-vh-100 bg-default">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-black shadow-sm sticky-top p-2">
-            <div class="container">
+            <div class="container flex-grow-1">
                 <a class="navbar-brand text-yellow-color fs-3" href="{{ url('/') }}">
 
                     {{ config('app.name', 'Laravel') }}
@@ -100,3 +100,5 @@
 </body>
 
 </html>
+
+@include('partials.footer')

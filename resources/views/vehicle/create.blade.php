@@ -8,12 +8,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
-  <!-- Scripts -->
   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
   <title>Add Vehicle</title>
 </head>
 
-<body class="bg-default">
+<body class="d-flex flex-column min-vh-100 bg-default">
   <nav class="navbar navbar-expand-lg navbar-light bg-black shadow-sm sticky-top">
     <div class="container">
       <a class="navbar-brand text-yellow-color" href={{ route('vehicle.index') }}>Add Vehicle</a>
@@ -25,21 +24,16 @@
                 Home
               </a>
             </li>
-            <li class="text-light">
-              |
-            </li>
+            <li class="text-light">|</li>
             <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 {{ Auth::user()->name }}
               </a>
-
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                   {{ __('Logout') }}
                 </a>
-
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                   @csrf
                 </form>
@@ -48,8 +42,10 @@
           </div>
         </ul>
       </div>
+    </div>
   </nav>
-  <div class="container h-100 mt-5">
+
+  <div class="container flex-grow-1 mt-3 mb-4"> <!-- Adicionei mb-4 aqui -->
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-12 col-md-10 col-lg-8 text-light">
         <h3 class="h1 text-yellow-color">Vehicle</h3>
@@ -112,6 +108,37 @@
       </div>
     </div>
   </div>
+
+  <footer class="bg-black text-light py-4 mt-auto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="text-yellow-color">About us</h5>
+          <p class="text-white-50">
+            Our mission is to provide the best vehicle sales and maintenance service, ensuring satisfaction and trust for our customers.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-yellow-color">Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="{{ route('home') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Home</a></li>
+            <li><a href="{{ route('vehicle.index') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Vehicles</a></li>
+            <li><a href="{{ route('vehicle.create') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Add Vehicle</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-yellow-color">Contact</h5>
+          <p class="text-white-50">Email: contact@devgarage.com</p>
+          <p class="text-white-50">Phone: (11) 1234-5678</p>
+        </div>
+      </div>
+      <hr class="text-light">
+      <div class="text-center">
+        <p class="m-0 text-white-50">&copy; {{ date('Y') }} Our Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 
 </html>
