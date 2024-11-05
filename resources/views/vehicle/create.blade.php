@@ -45,7 +45,7 @@
     </div>
   </nav>
 
-  <div class="container flex-grow-1 mt-3 mb-4"> <!-- Adicionei mb-4 aqui -->
+  <div class="container flex-grow-1 mt-3 mb-4">
     <div class="row h-100 justify-content-center align-items-center">
       <div class="col-12 col-md-10 col-lg-8 text-light">
         <h3 class="h1 text-yellow-color">Vehicle</h3>

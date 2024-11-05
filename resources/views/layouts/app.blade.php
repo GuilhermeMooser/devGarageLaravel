@@ -58,7 +58,6 @@
                                 </a>
                             </li>
                             @endif
-                            <!-- Exibir o botão "Home" quando não estiver nas rotas específicas -->
                             @if (request()->routeIs('vehicle.show'))
                             <li>
                                 <a href="{{ route('vehicle.index') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Home</a>
