@@ -77,7 +77,7 @@
             </div>
             <div class="form-group col-12 col-md-6">
               <label for="characteristics" class="text-yellow-color">Characteristics</label>
-              <input class="form-control" id="characteristics" name="characteristics" rows="3" required max="500"></input>
+              <input class="form-control" id="characteristics" name="characteristics" rows="3" required maxlength="500"></input>
             </div>
           </div>
 
