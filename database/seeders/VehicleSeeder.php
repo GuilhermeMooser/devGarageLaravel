@@ -30,7 +30,7 @@ class VehicleSeeder extends Seeder
             'year' => '2024',
             'model' => '2023',
             'mark' => 'BMW',
-            'photo' => 'https://motorshow.com.br/wp-content/uploads/sites/2/2024/06/m5000.jpg?x71212',
+            'photo' => 'https://images.unsplash.com/flagged/photo-1553505192-acca7d4509be?ixlib=rb-4.0.3',
             'characteristics' => 'Fast, reliable, and a pleasure to drive',
             'type' => Vehicle::TYPE_CAR,
             'price' => 133000,
