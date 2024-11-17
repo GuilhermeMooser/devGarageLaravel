@@ -1,5 +1,6 @@
 <?php
 //php artisan migrate:fresh --seed
+//php artisan test --testsuite=Feature
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
