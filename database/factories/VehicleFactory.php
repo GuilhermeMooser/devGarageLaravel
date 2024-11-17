@@ -17,11 +17,11 @@ class VehicleFactory extends Factory
             'year' => $this->faker->year,
             'model' => $this->faker->word,
             'mark' => $this->faker->company,
-            'photo' => $this->faker->imageUrl(640, 480, 'transport', true), // imagem de um veículo
+            'photo' => $this->faker->imageUrl(640, 480, 'transport', true),
             'characteristics' => $this->faker->text(100),
             'type' => $this->faker->randomElement([Vehicle::TYPE_CAR, Vehicle::TYPE_MOTORCYCLE]),
             'price' => $this->faker->randomFloat(2, 10000, 50000),
-            'user_id' => User::factory(), // cria um usuário relacionado
+            'user_id' => User::factory(),
         ];
     }
 }

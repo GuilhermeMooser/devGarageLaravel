@@ -10,11 +10,11 @@
             </div>
 
             <div class="col-md-4 mb-3">
-                <h5 class="text-yellow-color">Links Rápidos</h5>
+                <h5 class="text-yellow-color">Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ route('home') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Home</a></li>
-                    <li><a href="{{ route('vehicle.index') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Veículos</a></li>
-                    <li><a href="{{ route('vehicle.create') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Adicionar Veículo</a></li>
+                    <li><a href="{{ route('vehicle.index') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Vehicles</a></li>
+                    <li><a href="{{ route('vehicle.create') }}" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-light">Add Vehicle</a></li>
                 </ul>
             </div>
 
